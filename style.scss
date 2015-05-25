@@ -278,6 +278,12 @@ nav {
   background-color: $lightGray;
 }
 
+.img-normalize {
+    height: auto;
+    width: auto;
+    max-height: 400px;
+}
+
 footer {
   padding: 20px 0;
   text-align: center;
