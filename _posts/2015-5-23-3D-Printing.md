@@ -3,20 +3,40 @@ layout: post
 title: 3D Printing with MakerBot and OpenSCAD
 ---
 
-###Basic 3D Printing with MakerBot Thingverse
+##Basic 3D Printing with MakerBot Thingverse
 
 In this section we are going to get started with some basic 3D Printing. That is, we are going to customize some premade objects from [MakerBot Thingiverse](http://www.thingiverse.com/customizable){:target="_blank"} 
 
-If you want build and code your own 3D objects from scratch (which is awesome but a little harder), then take a look at the [Advanced 3D Printing section](###Advanced 3D Printing with OpenSCAD
-).
+If you want build and code your own 3D objects from scratch (which is awesome but a little harder), then take a look at the Advanced 3D Printing section.
 
 Here are some cool objects that have been preselected for you to customize:
 
 [iPhone 4/5/6 Case](http://www.thingiverse.com/apps/customizer/run?thing_id=813330){:target="_blank"}
 
-[Dog Tag](http://www.thingiverse.com/apps/customizer/run?thing_id=774035){:target="_blank"}
+[Key Chain](http://www.thingiverse.com/apps/customizer/run?thing_id=834725){:target="_blank"}
 
-###Advanced 3D Printing with OpenSCAD
+[Archimedes' Spiral](http://www.thingiverse.com/apps/customizer/run?thing_id=739927){:target="_blank"}
+
+Once you have selected and customized a "thing" to your liking, do the following:
+
+#####1. Click create thing.
+![Step 1]({{ site.baseurl }}/images/1.png){:.img-normalize}
+
+#####2. Uncheck the 'publish' box, then click 'create thing' again.
+
+![Step 2]({{ site.baseurl }}/images/2.png){:.img-normalize}
+
+#####3. Click 'go to my queue'
+
+![Step 3]({{ site.baseurl }}/images/3.png){:.img-normalize}
+
+#####4. Once it is finished click view thing, then click download thing, then click the file name of what was generated.
+
+![Step 4]({{ site.baseurl }}/images/4.png){:.img-normalize}
+
+#####5. The previous step should have downloaded a file with an .stl extension to your omputer. Double-click this and it should open in the MakerBot application where you can print. Please see the instructor for detailed on how to proceed with printing your object.
+
+##Advanced 3D Printing with OpenSCAD
 
 If you are familiar with some basic Geometry, then you already know about the X and Y axis that make up a 2D plane like in the one below:
 
