@@ -98,4 +98,4 @@ The following will build a ring (for your finger!). Basically, the lines that ar
 	}
 	
 
-Now, OpenSCAD can get really complicated, so those simple examples and then you can go down the "rabbit hole" of the OpenSCAD documentation on your own [here](http://en.wikibooks.org/wiki/Category:OpenSCAD_User_Manual).
+Now, OpenSCAD can get really complicated, so start with those simple examples and then you can go down the "rabbit hole" of the OpenSCAD documentation on your own [here](http://en.wikibooks.org/wiki/Category:OpenSCAD_User_Manual).
