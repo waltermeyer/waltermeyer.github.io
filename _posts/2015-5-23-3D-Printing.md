@@ -34,7 +34,7 @@ Once you have selected and customized a "thing" to your liking, do the following
 
 ![Step 4]({{ site.baseurl }}/images/4.png){:.img-normalize}
 
-#####5. The previous step should have downloaded a file with an .stl extension to your omputer. Double-click this and it should open in the MakerBot application where you can print. Please see the instructor for detailed on how to proceed with printing your object.
+#####5. The previous step should have downloaded a file with an .stl extension to your computer. Double-click this and it should open in the MakerBot application where you can print. Please see the instructor for details on how to proceed with printing your object.
 
 ##Advanced 3D Printing with OpenSCAD
 
@@ -87,5 +87,15 @@ And press the preview button again.
 In this case, we are telling the program to create a sphere of size 40 millimiters. The 40 mm in this case corresponds to the diameter of the sphere.
 
 Finally, let's make something a little more complicated (and useful) by combining the simple things we have done so far.
+
+The following will build a ring (for your finger!). Basically, the lines that are preceded by two forward slashes (//) are comments which indicate what is going on. Paste it into your OpenSCAD application and try it for yourself. The idea here is that you are using the difference() function to take two cylinders, subtracting the second one from the first. This has the effect of creating a ring!
+
+	difference() {
+	        // build a cylinder
+	        cylinder (h = 13, r=20, center = true);
+	        // "subtract" another cylinder from the previous one
+	        cylinder (h = 50, r=17, center = true);
+	}
+	
 
 Now, OpenSCAD can get really complicated, so those simple examples and then you can go down the "rabbit hole" of the OpenSCAD documentation on your own [here](http://en.wikibooks.org/wiki/Category:OpenSCAD_User_Manual).
