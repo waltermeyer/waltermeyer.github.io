@@ -3,7 +3,7 @@ layout: post
 title: 3D Printing with MakerBot and OpenSCAD
 ---
 
-##Basic 3D Printing with MakerBot Thingverse
+##•Basic 3D Printing with MakerBot Thingverse•
 
 In this section we are going to get started with some basic 3D Printing. That is, we are going to customize some premade objects from [MakerBot Thingiverse](http://www.thingiverse.com/customizable){:target="_blank"} 
 
@@ -26,7 +26,7 @@ Once you have selected and customized a "thing" to your liking, do the following
 
 ![Step 2]({{ site.baseurl }}/images/2.png){:.img-normalize}
 
-#####3. Click 'go to my queue'
+######3. Click 'go to my queue'
 
 ![Step 3]({{ site.baseurl }}/images/3.png){:.img-normalize}
 
@@ -36,7 +36,7 @@ Once you have selected and customized a "thing" to your liking, do the following
 
 #####5. The previous step should have downloaded a file with an .stl extension to your computer. Double-click this and it should open in the MakerBot application where you can print. Please see the instructor for details on how to proceed with printing your object.
 
-##Advanced 3D Printing with OpenSCAD
+##•Advanced 3D Printing with OpenSCAD•
 
 If you are familiar with some basic Geometry, then you already know about the X and Y axis that make up a 2D plane like in the one below:
 
