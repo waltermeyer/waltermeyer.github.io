@@ -74,13 +74,6 @@ class: center, middle, inverse
 .pinkify[(aka Container Virtualization)]
 
 Walter Meyer SUNY Purchase
-
----
-
-# Agenda
-
-- What is Container Virtualization?
-- What is Docker?
   
 ---
 
@@ -90,6 +83,62 @@ Walter Meyer SUNY Purchase
   	<img src="img/docker_vs_cont.png">
   </p>
   
+---
+
+# What is Container Virtualization?
+
+  <p>
+  	<img src="img/simplecontview.png" height="275">
+  </p>
+  
+---
+
+# What is Docker?
+
+- Docker is an implementation of container virtualization.
+- It is a suite of server and client tools.
+- Uses built-in Linux Kernel (3.10+) features.
+- Namely, namespaces and cgroups (more on those later).
+  <p>
+  	<img src="img/docker-logo.png">
+  </p>
+
+---
+
+# Simple Docker workflow
+
+- Docker is an implementation of container virtualization.
+  <p>
+  	<img src="img/workflow.png">
+  </p>
+
+---
+
+# What is Docker?
+
+- Docker Daemon - application that runs on the container host machine.
+- Docker Client - controls the Docker daemon.
+- Docker Hub - Cloud service where we can download pre-built "images" to run on our host machine. Ubuntu, CentOS, etc.
+  <p>
+  	<img src="img/docker-logo.png">
+  </p>
+  
+---
+# Under the Linux Container Hood
+
+- namespaces and cgroups are features of the linux kernel that are used by Docker to give us Container Virtualization.
+- Together these features allow us to realize virtualized systems at the Kernel level.
+- All of our containers leverage and share the Kernel of our host OS.
+
+---
+
+# Under the Linux Container Hood
+
+- Namespaces are essentially abstractions that create process-based isolation of system resources. A PID in a given namespace *thinks* it is by itself with respect to other PIDs, network resources, mount points, etc.
+- cgroups (aka control groups) control and limit access to system resources like CPU, I/O, Memory, Network, etc.
+- Together these features allow us to realize virtualized systems at the Kernel level.
+- All of our containers leverage and share the Kernel of our host OS.
+
 ---
   # The container metaphor...
 
@@ -112,7 +161,7 @@ Walter Meyer SUNY Purchase
 	<img src="img/ship.png" height="275">
 </p>
 
----
+---	
   # The container metaphor...
  
 - We can "container-ize" our applications and all of their dependencies easily with Docker.
@@ -124,40 +173,25 @@ Walter Meyer SUNY Purchase
 
 ---
 
----
+  # What is the Docker container format?
+ 
+- The Dockerfile specifies how to build a container.
 
-# What is Docker?
+```dockerfile
 
-- Docker is an implementation of container virtualization.
-- It is a suite of server and client tools.
-- Uses built-in Linux Kernel (3.10+) features (namespaces and cgroups).
-- Namely, namespaces and cgroups.
-  <p>
-  	<img src="img/docker-logo.png">
-  </p>
+# Use CentOS 7 as our base image
+FROM centos:7
 
----
+# Install Apache web server
+RUN yum install httpd -y
 
-# What is Docker?
+# Open up port 80 for web traffic
+EXPOSE 80
 
-- Docker Client
-- Docker Daemon
-- Docker Hub
-- 
-  <p>
-  	<img src="img/docker-logo.png">
-  </p>
-  
----
-# Under the Linux Container Hood
+# The command to run when our container starts
+ENTRYPOINT /usr/sbin/apache2 
 
-- namespaces and cgroups are features of the linux kernel that are used by Docker to give us Container Virtualization.
-
-- namespaces
-- Process-based isolation of system resources. A PID in a given namespace *thinks* it is by itself with respect to other PIDs, network resources, mount points, etc.
-
-- cgroups (aka control groups)
-
+```
 ---
 
 class: inverse, footnote
