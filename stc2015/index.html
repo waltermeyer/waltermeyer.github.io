@@ -277,7 +277,7 @@ class: inverse, footnote
 
 ---
 
-  # What is the Docker container format?
+  # What is the Dockerfile format?
  
 - The Dockerfile specifies how to build a container.
 - Akin to a recipe. We create an image based on our Dockerfile instructions.
@@ -425,9 +425,11 @@ Successfully built 311ab666eb60
 
 - "Container-Focused" Linux Distros: CoreOS, Project Atomic, Dokku, Boot2Docker.
 
-- Cloud Providers: Amazon AWS, Microsoft Azure, Google, DigitalOcean, DotCloud, Tutum, etc.
+- Cloud Providers: Amazon AWS, Microsoft Azure, Google Container Engine, DigitalOcean, DotCloud, Tutum, etc.
 
 - Docker client for Microsoft Windows available (MS and Docker have partnered)!
+
+- Docker Partners: https://www.docker.com/partners/find/
 
 ---
 
@@ -436,6 +438,10 @@ Successfully built 311ab666eb60
   - But two things worth talking about!
   - Started using it as a part of development workflow for Python web-application for ResNet network registration.
   - Running Gitlab using Docker and Docker Compose.
+  .center[<p>
+  	<img src="img/gitlablogo.png" width="375">
+  	<img src="img/web2pylogo.png" width="375">
+  </p>]
 
 ---
  # Containerized GitLab
@@ -461,14 +467,13 @@ Successfully built 311ab666eb60
  bash-3.2$ docker run -d --name=gitlab -v /opt/gitlab/data:/home/git/data \
   -e GITLAB_PORT=443 -e GITLAB_HOST=git.purchase.edu -e GITLAB_SSH_PORT=22 -e GITLAB_HTTPS=true \
   -p 10.0.0.55:22:22 -p 10.0.0.55:22:22
- 
  ```
  - That's a bit hard on the eyes and brain.
  - Docker Compose to the rescue!
 ---
  # Containerized GitLab
- - This is a Docker Compose file.
- - With a single YAML formatted file and Docker Compose
+ - This is a Docker Compose fil. A single YAML formatted file for Docker Compose.
+ - With this in a working directory, we run: *docker-compose up* and all 3 containers start.
 ```yaml
 postgresql:
   image: sameersbn/postgresql:latest
@@ -554,10 +559,11 @@ gitlab:
 ---
 
   # What are the use cases for the Enterprise and Education?
-  - Use it as a component of a PaaS (Platform as a Service).
+  - Use it as a component of a PaaS (Platform as a Service). (http://deis.io/).
+  - Use Docker based project from Yelp to put shell users into containers. (https://github.com/Yelp/dockersh)
   - *Faculty and Student development could benefit from having a reusuable, disposable, and lightwieght container-based platform.*
   - Streamline your development and deployment processes.
-  - *Being able to quickly create, test, and destroy the environments your applications run on regardless of platform is invaluable to improving development.*
+  - *Being able to quickly create, test, and destroy the environments your applications run on, regardless of platform, is invaluable to improving development and testing.*
   - Application/security testing.
   - Running an application in an isolated container allows you to see what it's doing before deploying it elsewhere. Then you can do a: 
   ```shell
@@ -601,7 +607,7 @@ http://kitematic.com
 
 # The future...
 
-- IMHO, containers, in one form or another are going to become increasingly prominent for running and deploying isolated, distributed, and highly available applications on Linux.
+- IMHO, containers, in one form or another, are going to become increasingly prominent for running and deploying isolated, distributed, and highly available applications on Linux.
 - The container runtimes themselves, Docker, Rocket, etc. will likely change and face stiff, albeit healthy, competition from one another and elsewhere, as container technology, and the principles it brings with it, continue to advance and gain traction in the Enterprise.
 
 ---
